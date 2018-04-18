@@ -1,0 +1,21 @@
+import time
+
+
+def f1(func):
+    def f2(y):
+        print('f2 is running')
+        return func(y) + 1
+    return f2
+
+
+@f1  # 相当于 xx = f1(gun)  此时的
+def gun(m):
+    print('gun is called %d 次' % (n+1))
+    return m*m
+
+
+n = 0
+while True:
+    time.sleep(2)
+    print(gun(8))
+    n += 1
