@@ -1,0 +1,8 @@
+
+path = input("请输入文件路径(相对路径或者绝对路径):")
+with open(path, 'r') as f:
+    content = f.readlines()
+    print("文件一共有%s行" % (len(content)))
+    line = int(input("你想打印的行数："))
+    for i in range(line):
+        print("第%s行" % (i+1), content[i].split('\n')[0])
